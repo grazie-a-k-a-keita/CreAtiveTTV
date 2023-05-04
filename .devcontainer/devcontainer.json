@@ -6,13 +6,20 @@
 	},
 	"customizations": {
 		"vscode": {
-			"extensions": [
-				"dbaeumer.vscode-eslint",
-				"esbenp.prettier-vscode",
-				"dsznajder.es7-react-js-snippets",
-				"csstools.postcss"
-			]
+		  "settings": {
+			"editor.defaultFormatter": "esbenp.prettier-vscode",
+			"editor.formatOnSave": true,
+			"editor.codeActionsOnSave": {
+			  "source.fixAll": true
+			}
+		  },
+		  "extensions": [
+			"dbaeumer.vscode-eslint",
+			"esbenp.prettier-vscode",
+			"dsznajder.es7-react-js-snippets",
+			"csstools.postcss"
+		  ]
 		}
-	},
+	  },
 	"remoteUser": "node"
 }
