@@ -8,54 +8,79 @@ function App() {
 
   const utterThis = new SpeechSynthesisUtterance(speechText);
 
-  utterThis.lang = "ja-JP"; // lang
-  utterThis.pitch = speechPitch; // 0 ~ 2 Default 1
-  utterThis.rate = speechRate; // 0,1 ~ 10 Default 1
-  utterThis.volume = speechVolume; // 0 ~ 1 Default 1
+  const speech = () => {
+    // lang   : japan
+    utterThis.lang = "ja-JP";
+    // pitch  : 0 ~ 2    (Default 1)
+    utterThis.pitch = speechPitch;
+    // rate   : 0,1 ~ 10 (Default 1)
+    utterThis.rate = speechRate;
+    // volume : 0 ~ 1    (Default 1)
+    utterThis.volume = speechVolume;
 
-  utterThis.onerror = (event) => {
-    console.log(
-      `An error has occurred with the speech synthesis: ${event.error}`
-    );
+    window.speechSynthesis.speak(utterThis);
+
+    utterThis.onerror = () => {
+      alert(
+        "申し訳ありません、音声合成に失敗しました。\n更新して再度行うか、別のブラウザで試してみてください。"
+      );
+    };
   };
 
-  const onclick = () => {
-    window.speechSynthesis.speak(utterThis);
-    setSpeechText("");
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      speech();
+      setSpeechText("");
+    }
   };
 
   return (
     <>
-      <input
-        type="range"
-        min="0"
-        max="2"
-        step="0.5"
-        onChange={(e) => setSpeechPitch(Number(e.target.value))}
-        value={speechPitch.toString()}
-      />
-      <input
-        type="range"
-        min="0"
-        max="2"
-        step="0.5"
-        onChange={(e) => setSpeechRate(Number(e.target.value))}
-        value={speechRate.toString()}
-      />
-      <input
-        type="range"
-        min="0"
-        max="1"
-        step="0.1"
-        onChange={(e) => setSpeechVolume(Number(e.target.value))}
-        value={speechVolume.toString()}
-      />
+      <div>
+        <p>CreAtiveTTV</p>
+      </div>
+      <p>Enter the text you want to read</p>
       <input
         type="text"
+        placeholder="Type here ..."
         onChange={(e) => setSpeechText(e.target.value)}
         value={speechText}
+        onKeyDown={handleKeyDown}
       />
-      <button onClick={onclick}>speak</button>
+      <p>When you have finished typing, press the “Enter key”</p>
+      <div>
+        <p>Pitch</p>
+        <input
+          type="range"
+          min="0"
+          max="2"
+          step="0.5"
+          onChange={(e) => setSpeechPitch(Number(e.target.value))}
+          value={speechPitch.toString()}
+        />
+      </div>
+      <div>
+        <p>Rate</p>
+        <input
+          type="range"
+          min="0"
+          max="2"
+          step="0.5"
+          onChange={(e) => setSpeechRate(Number(e.target.value))}
+          value={speechRate.toString()}
+        />
+      </div>
+      <div>
+        <p>Volume</p>
+        <input
+          type="range"
+          min="0"
+          max="1"
+          step="0.1"
+          onChange={(e) => setSpeechVolume(Number(e.target.value))}
+          value={speechVolume.toString()}
+        />
+      </div>
     </>
   );
 }
