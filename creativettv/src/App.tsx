@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./css/app.css";
 
 function App() {
   const [speechText, setSpeechText] = useState<string>("");
@@ -35,23 +36,28 @@ function App() {
   };
 
   return (
-    <>
-      <div>
-        <p>CreAtiveTTV</p>
+    <div className="App">
+      <div className="titleBox">
+        <p className="titleName">CreAtiveTTV</p>
       </div>
-      <p>Enter the text you want to read</p>
+      <p className="ExplanatoryText_01">Enter the text you want to read</p>
       <input
         type="text"
+        className="inputText"
         placeholder="Type here ..."
         onChange={(e) => setSpeechText(e.target.value)}
         value={speechText}
         onKeyDown={handleKeyDown}
       />
-      <p>When you have finished typing, press the “Enter key”</p>
-      <div>
-        <p>Pitch</p>
+      <div className="inputUnderline" />
+      <p className="ExplanatoryText_02">
+        When you have finished typing, press the “Enter key”
+      </p>
+      <div className="sliderContainer">
+        <label>Pitch</label>
         <input
           type="range"
+          className="slider"
           min="0"
           max="2"
           step="0.5"
@@ -59,10 +65,11 @@ function App() {
           value={speechPitch.toString()}
         />
       </div>
-      <div>
-        <p>Rate</p>
+      <div className="sliderContainer">
+        <label>Rate</label>
         <input
           type="range"
+          className="slider"
           min="0"
           max="2"
           step="0.5"
@@ -70,10 +77,11 @@ function App() {
           value={speechRate.toString()}
         />
       </div>
-      <div>
-        <p>Volume</p>
+      <div className="sliderContainer">
+        <label>Volume</label>
         <input
           type="range"
+          className="slider"
           min="0"
           max="1"
           step="0.1"
@@ -81,7 +89,7 @@ function App() {
           value={speechVolume.toString()}
         />
       </div>
-    </>
+    </div>
   );
 }
 
