@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "creativettv/build",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
