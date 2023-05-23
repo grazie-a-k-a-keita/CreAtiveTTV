@@ -1,6 +1,5 @@
 # CreAtiveTTV
-## description
-- 入力されたテキストを音声として出力するサービス
+入力されたテキストを音声として出力するサービス
 ## URL
 - https://creativettv-3d718.web.app/<br>
 - https://creativettv-3d718.firebaseapp.com/
