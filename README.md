@@ -5,7 +5,8 @@
 - https://creativettv-3d718.firebaseapp.com/
 ## Skill
 ### Web Speech API
-https://developer.mozilla.org/ja/docs/Web/API/Web_Speech_API
+- https://developer.mozilla.org/ja/docs/Web/API/Web_Speech_API
+- https://developer.mozilla.org/ja/docs/Web/API/SpeechSynthesisUtterance
 ## commit message
 - feat: 新しい機能
 - fix: バグの修正
