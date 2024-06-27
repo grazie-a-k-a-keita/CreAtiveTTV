@@ -1,13 +1,21 @@
-# CreAtiveTTV
+## CreAtiveTTV
+
 入力されたテキストを音声として出力するサービス
+
 ## URL
-- https://creativettv-3d718.web.app/<br>
+
+- https://creativettv-3d718.web.app/
 - https://creativettv-3d718.firebaseapp.com/
+
 ## Skill
+
 ### Web Speech API
+
 - https://developer.mozilla.org/ja/docs/Web/API/Web_Speech_API
 - https://developer.mozilla.org/ja/docs/Web/API/SpeechSynthesisUtterance
+
 ## commit message
+
 - feat: 新しい機能
 - fix: バグの修正
 - docs: ドキュメントのみの変更
@@ -16,3 +24,7 @@
 - perf: パフォーマンス向上関連
 - test: テスト関連
 - chore: ビルド、補助ツール、ライブラリ関連
+
+```bash
+bun dev
+```

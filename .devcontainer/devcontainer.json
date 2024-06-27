@@ -1,38 +1,34 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
-// https://github.com/microsoft/vscode-dev-containers/tree/v0.245.2/containers/typescript-node
 {
-	"name": "CreAtiveTTV",
-	"image": "mcr.microsoft.com/devcontainers/javascript-node:0-18",
-	// Configure tool-specific properties.
-	"customizations": {
-		// Configure properties specific to VS Code.
-		"vscode": {
-			"settings": {
-				"editor.defaultFormatter": "esbenp.prettier-vscode",
-				"editor.formatOnSave": true,
-				"editor.codeActionsOnSave": {
-					"source.organizeImports": true,
-					"source.fixAll.eslint": true
-				}
-			},
-			// Add the IDs of extensions you want installed when the container is created.
-			"extensions": [
-				"dsznajder.es7-react-js-snippets",
-				"dbaeumer.vscode-eslint",
-				"esbenp.prettier-vscode",
-				"christian-kohler.path-intellisense",
-				"mhutchie.git-graph",
-				"VisualStudioExptTeam.vscodeintellicode",
-				"formulahendry.auto-rename-tag",
-				"formulahendry.auto-close-tag",
-				"streetsidesoftware.code-spell-checker"
-			]
-		}
-	},
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
-	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "yarn install",
-	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-	"remoteUser": "node"
+  "name": "CreAtiveTTV",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "remoteUser": "node",
+  "features": {
+    "ghcr.io/shyim/devcontainers-features/bun:0": {}
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+          "source.organizeImports": true,
+          "source.fixAll.eslint": true
+        }
+      },
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "christian-kohler.path-intellisense",
+        "mhutchie.git-graph",
+        "VisualStudioExptTeam.vscodeintellicode",
+        "formulahendry.auto-rename-tag",
+        "formulahendry.auto-close-tag",
+        "streetsidesoftware.code-spell-checker",
+        "SuhelMakkad.shadcn-ui",
+        "bradlc.vscode-tailwindcss"
+      ]
+    }
+  }
 }
