@@ -1,6 +1,5 @@
 import { AudioLines } from 'lucide-react';
 import { useState } from 'react';
-import './App.css';
 import { Button } from './components/ui/button';
 import { Slider } from './components/ui/slider';
 import { Textarea } from './components/ui/textarea';
@@ -45,12 +44,12 @@ function App() {
 
   return (
     <div className='flex min-h-dvh justify-center bg-primary'>
-      <div className='flex w-full max-w-screen-sm place-items-center px-32 py-16'>
+      <div className='flex w-full max-w-screen-sm place-items-center p-16'>
         <div className='m-auto w-full'>
-          <div className='mb-4 flex h-24 items-center justify-center rounded-lg border-2'>
-            <h1 className='text-4xl font-bold text-primary-foreground'>CreAtiveTTV</h1>
+          <div className='mb-4 flex h-32 items-center justify-center rounded-lg border-4'>
+            <h1 className='text-4xl font-black text-primary-foreground'>CreAtiveTTV</h1>
           </div>
-          <p className='mb-10 text-center font-medium text-muted-foreground'>Enter the text you want to read</p>
+          <p className='mb-16 text-center font-medium text-muted-foreground'>Enter the text you want to read</p>
           <div className='grid gap-6'>
             <Textarea
               placeholder='Type your text here.'
@@ -69,7 +68,7 @@ function App() {
               <AudioLines className='mr-2 size-4' />
               Generate Voice
             </Button>
-            <div className='flex space-x-10'>
+            <div className='mt-12 flex space-x-10'>
               <div className='w-32'>
                 <p className='font-medium text-primary-foreground'>Pitch</p>
               </div>
