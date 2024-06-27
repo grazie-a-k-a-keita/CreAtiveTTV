@@ -63,6 +63,7 @@ $ bun run build
 
 ```bash
 # 未ログイン状態の場合はログインを先に行う
+# dist 配下のプロジェクトがデプロイされる
 $ bun run firebase deploy --only hosting
 ```
 

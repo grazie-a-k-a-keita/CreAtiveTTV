@@ -44,12 +44,12 @@ function App() {
 
   return (
     <div className='flex min-h-dvh justify-center bg-primary'>
-      <div className='flex w-full max-w-screen-sm place-items-center p-16'>
+      <div className='flex w-full max-w-screen-sm place-items-center p-8 sm:p-16'>
         <div className='m-auto w-full'>
           <div className='mb-4 flex h-32 items-center justify-center rounded-lg border-4'>
-            <h1 className='text-4xl font-black text-primary-foreground'>CreAtiveTTV</h1>
+            <h1 className='text-2xl font-black text-primary-foreground sm:text-4xl'>CreAtiveTTV</h1>
           </div>
-          <p className='mb-16 text-center font-medium text-muted-foreground'>Enter the text you want to read</p>
+          <p className='mb-16 text-center text-xl font-medium text-muted-foreground'>Enter the text you want to read</p>
           <div className='grid gap-6'>
             <Textarea
               placeholder='Type your text here.'
@@ -57,6 +57,7 @@ function App() {
               onChange={(e) => {
                 setSpeechText(e.target.value);
               }}
+              maxLength={140}
             />
             <Button
               variant='secondary'
@@ -68,9 +69,9 @@ function App() {
               <AudioLines className='mr-2 size-4' />
               Generate Voice
             </Button>
-            <div className='mt-12 flex space-x-10'>
-              <div className='w-32'>
-                <p className='font-medium text-primary-foreground'>Pitch</p>
+            <div className='mt-12 flex flex-col sm:flex-row'>
+              <div className='mb-4 w-32 sm:mb-0'>
+                <p className='text-lg font-medium text-primary-foreground'>Pitch</p>
               </div>
               <Slider
                 defaultValue={[1]}
@@ -82,9 +83,9 @@ function App() {
                 }}
               />
             </div>
-            <div className='flex space-x-10'>
-              <div className='w-32'>
-                <p className='font-medium text-primary-foreground'>Rate</p>
+            <div className='flex flex-col sm:flex-row'>
+              <div className='mb-4 w-32 sm:mb-0'>
+                <p className='text-lg font-medium text-primary-foreground'>Rate</p>
               </div>
               <Slider
                 defaultValue={[1]}
@@ -96,9 +97,9 @@ function App() {
                 }}
               />
             </div>
-            <div className='flex space-x-10'>
-              <div className='w-32'>
-                <p className='font-medium text-primary-foreground'>Volume</p>
+            <div className='flex flex-col sm:flex-row'>
+              <div className='mb-4 w-32 sm:mb-0'>
+                <p className='text-lg font-medium text-primary-foreground'>Volume</p>
               </div>
               <Slider
                 defaultValue={[1]}
