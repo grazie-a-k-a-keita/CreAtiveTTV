@@ -89,3 +89,13 @@ $ bun run firebase deploy --only hosting
 
 - [creative-ttv.web.app](https://creative-ttv.web.app/)
 - [creative-ttv.firebaseapp.com](https://creative-ttv.firebaseapp.com/)
+
+### Other
+
+- コミット時に husky でエラーが出る場合
+
+```bash
+# fatal: cannot exec '.husky/pre-commit': Permission denied
+
+chmod +x .husky/pre-commit
+```
